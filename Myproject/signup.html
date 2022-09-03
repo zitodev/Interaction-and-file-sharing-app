@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LECTURER-STUDENT INTERACTIONAL AND FILE SHARING APPLICATION</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet"  href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+<body>
+  <nav id="navbar2" class="navbar navbar-default bg-danger">
+      <div class="container">
+         <a class="navbar-brand" href="#">
+          
+        <img  src="images/logo.png" alt="logo" class="logo">
+        </a>
+    
+        <h2 class="text-center">University of Cross River State Calabar</h2>
+        <p class="font-weight-bold text-center heading">LECTURER-STUDENT INTERACTION AND FILE SHARING APPLICATION</p>
+        <p style="text-align: right;"><a href="index.html"><i class="fa fa-home fa-lg" style="color: white;"></i></a></p>
+      <!--<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#collapsiblenavbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="collapsiblenavbar">
+                  <ul class="nav navbar-nav ">
+                    <li ><a href="index.html">Home</a></li>
+                    <li ><a href="login.html">Login</a></li>
+                  </ul>
+        </div>-->
+      </div>
+  </nav>
+
+<div class="container">
+  <div class="col-md-3"></div>
+<div class="container col-md-6 signupcon" >
+  <form action="login.html" class="form-horizontal" name="myform" onsubmit="return validateForm()" method="POST" style="margin: 15px; mar">
+    <h2 class="signuphead">Sign-Up</h2>
+    <div class="form-group">
+      <label for="nam">Name</label>
+        <input type="text" name="fullname" class="form-control" id="nam" placeholder="Enter your fullname">
+      </div>
+    <div class="form-group">
+      <label for="reg">Reg No</label>
+        <input type="text" name="reg-no" class="form-control" id="reg" placeholder="Enter your Reg No">
+    </div>
+    <div class="form-group">
+      <label for="user">Username</label>
+        <input type="text" name="username" class="form-control" id="user" placeholder="Enter your username">
+    </div>
+    <div class="form-group">
+      <label for="level">Level</label>
+        <select class="form-control" id="level" name="level">
+          <option>select your level</option>
+          <option>100 Level</option>
+          <option>200 level</option>
+          <option>300 level</option>
+          <option>400 level</option>
+        </select>
+    </div>
+    <div class="form-group">
+      <label for="birth">Date of Birth</label>
+       <input type="date" name="date-birth" class="form-control" id="birth">
+      </div>
+    <div class="form-group">
+      <label for="state">State</label>
+        <select class="form-control" id="state">
+          <option>choose your state</option>
+          <option>Abia</option>
+          <option>Anambra</option>
+          <option>Benu</option>
+          <option>Cross River</option>
+          <option>Enugu</option>
+          <option>Imo</option>
+          <option>Ebony</option>
+          <option>Akwa-Ibom</option>
+          <option>Nassawara</option>
+          <option>Sokoto</option>
+          <option>Lagos</option>
+          <option>Rivers</option>
+          <option>Pleatue</option>
+          <option>Ogun</option>
+          <option>Osun</option>
+          <option>Abuja</option>
+        </select>
+      </div>
+    <div class="form-group">
+      <label for="country">Country</label>
+        <input type="text" name="country" id="country" class="form-control" placeholder="Enter Your Country">
+      </div>
+    <div class="form-group">
+      <label for="gen">Gender</label>
+      <select class="form-control">
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="phn">Phone Number</label>
+        <input type="tel" name="phone" class="form-control" placeholder="Enter Your Phone Number" id="phn">
+      </div>
+    
+    <div class="form-group">
+      <label for="eml">Email</label>
+        <input type="email" name="email" class="form-control" id="eml" placeholder="Enter Your Email-Address">
+      </div>
+   
+    <div class="form-group">
+      
+      <label  for="pwd">Password</label>
+        <input type="password" name="password" class="form-control" id="pwd" placeholder="Enter Password">
+      </div>
+ 
+      <div class="form-group">
+        
+        <label  id="pwd2">Confirm Password</label>
+        <input type="password" name="confim_password" class="form-control" id="pwd" placeholder="Confirm Password">
+      </div>
+      <div class="form-group">
+      <label>I am a..</label>
+      <select class="form-control">
+        <option>Student</option>
+        <option>Lecturer</option>
+      </select>
+    </div>
+   
+    <div class="form-group">
+      
+        <button type="submit" class="btn btn-primary" value="submit">Sign-Up </button>
+      </div>
+
+  </form>
+ 
+</div>
+</div>
+
+
+
+
+
+
+<br>
+
+
+<hr>
+<footer>
+    <p style="text-align: center; "><a href="#"><i class="fa fa-facebook fa-lg"> Facebook</i></a>  <a href="#"><i class="fa fa-instagram fa-lg"> Instagram</i></a> <a href="#"><i class="fa fa-google fa-lg"> Google</i></a></p>
+  
+        <p style="text-align: center;">copyright &copy; 2011 zitodev.com</p>
+  </footer>
+  
+<script>
+  function validateForm() {
+    let error = "Fill the empty field";
+    var x = document.forms["myform"]["fullname", "reg-no", "username", "phone", "password", "confim_password"].value;
+    if (x == null || x == "") {
+      alert(error);
+      return false;
+    }
+   
+  }
+
+  // function validateForm(password, confimPassword) {
+  //   var x = document.forms["myform"][ "password", "confim-password"].value;
+  //   if (password === confimPassword){
+  //     alert("password confirm");
+  //   }else{
+  //     if(password !== confimPassword){
+  //       alert("password did match")
+  //     }
+  //   }
+  // }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+
+
+</body>
+</html>
